@@ -1258,7 +1258,8 @@ footer p {
     display: block;
   }
   
-  .hero-subtitle {
+  .hero-subtitle,
+  .section-subtitle-hand {
     font-size: 1.5rem;
   }
 
@@ -1272,6 +1273,10 @@ footer p {
     z-index: 10;
   }
   
+  .polaroid-caption {
+    font-size: 1.15rem;
+  }
+  
   .attraction-desc {
     font-size: 1.15rem;
     line-height: 1.8;
@@ -1283,7 +1288,7 @@ footer p {
   }
   
   .ending-signature {
-    font-size: 2.8rem;
+    font-size: 2.0rem;
   }
   
   .itinerary-timeline {
