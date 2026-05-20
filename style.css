@@ -131,8 +131,31 @@ p {
 .hero-flower-3 { top: 30%; right: 15%; width: 80px; animation-delay: 4s; }
 
 @keyframes float {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-20px) rotate(10deg); }
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-15px) rotate(10deg) scale(1.05); }
+  100% { transform: translateY(-30px) rotate(20deg) scale(1); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-tag {
@@ -168,6 +191,10 @@ p {
   color: var(--primary);
 }
 
+.hero-mobile-br {
+  display: none;
+}
+
 .hero-subtitle {
   font-family: var(--font-family-hand);
   font-size: 2.2rem;
@@ -191,7 +218,7 @@ p {
   box-shadow: var(--polaroid-shadow);
   border-radius: 4px;
   transform: rotate(-3deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   width: 160px;
 }
 
@@ -203,7 +230,7 @@ p {
 }
 
 .hero-polaroid:hover {
-  transform: scale(1.08) rotate(0deg);
+  transform: scale(1.15) rotate(0deg);
   z-index: 5;
   box-shadow: var(--shadow-lg);
 }
@@ -767,12 +794,12 @@ p {
   box-shadow: var(--polaroid-shadow);
   border-radius: 4px;
   transform: rotate(1deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   overflow: hidden;
 }
 
 .polaroid-media-container:hover {
-  transform: scale(1.02) rotate(0deg);
+  transform: scale(1.05) rotate(0deg);
   box-shadow: var(--shadow-lg);
 }
 
@@ -1222,11 +1249,41 @@ footer p {
   }
   
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.1rem;
+    word-break: keep-all;
+    line-height: 1.3;
+  }
+  
+  .hero-mobile-br {
+    display: block;
   }
   
   .hero-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-polaroid {
+    width: 180px;
+  }
+  
+  .hero-polaroid:hover,
+  .hero-polaroid:active {
+    transform: scale(1.22) rotate(0deg) !important;
+    z-index: 10;
+  }
+  
+  .attraction-desc {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+  
+  .ending-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+  }
+  
+  .ending-signature {
+    font-size: 2.8rem;
   }
   
   .itinerary-timeline {
@@ -1264,3 +1321,4 @@ footer p {
     padding: 2.5rem 1.5rem;
   }
 }
+

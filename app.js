@@ -206,6 +206,28 @@ document.addEventListener('DOMContentLoaded', () => {
     nextImage();
   });
 
+  // Touch swipe gestures for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const swipeThreshold = 50; // min drag distance in px
+    if (touchEndX < touchStartX - swipeThreshold) {
+      nextImage();
+    } else if (touchEndX > touchStartX + swipeThreshold) {
+      prevImage();
+    }
+  }
+
   // Close when clicking background outside the image and controls
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox || e.target.classList.contains('lightbox-content-wrapper')) {
@@ -224,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevImage();
     }
   });
+
 
   // --- Back to Top Button ---
   const backToTopBtn = document.querySelector('.back-to-top');
