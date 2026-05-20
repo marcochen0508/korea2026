@@ -1274,7 +1274,15 @@ footer p {
   }
   
   .polaroid-caption {
-    font-size: 1.15rem;
+    font-size: 0.95rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.3;
+  }
+  
+  .hero-polaroid-caption {
+    font-size: 0.95rem;
   }
   
   .attraction-desc {
