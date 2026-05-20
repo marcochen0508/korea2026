@@ -1285,6 +1285,11 @@ footer p {
     font-size: 0.95rem;
   }
   
+  .attraction-tag {
+    font-size: 1.0rem;
+    margin-bottom: 0.6rem;
+  }
+  
   .attraction-desc {
     font-size: 1.15rem;
     line-height: 1.8;
