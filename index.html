@@ -88,21 +88,21 @@
       <div class="boarding-pass">
         <div class="pass-header">
           <h3>去程航班 DEPARTURE</h3>
-          <span class="status-badge">即將推出</span>
+          <span class="status-badge" style="background: var(--accent); color: white;">中華航空</span>
         </div>
         <div class="pass-body">
           <div class="pass-route">
             <div class="route-airport">
-              <div class="airport-code">TPE</div>
-              <div class="airport-name">台北桃園</div>
+              <div class="airport-code">KHH</div>
+              <div class="airport-name">高雄小港</div>
             </div>
             <div class="route-connection">
               <div class="route-plane">✈</div>
               <div class="route-line"></div>
             </div>
             <div class="route-airport">
-              <div class="airport-code">PUS</div>
-              <div class="airport-name">釜山金海</div>
+              <div class="airport-code">ICN</div>
+              <div class="airport-name">首爾仁川</div>
             </div>
           </div>
           <div class="pass-details">
@@ -116,11 +116,15 @@
             </div>
             <div class="detail-item">
               <span class="detail-label">航班編號 FLIGHT</span>
-              <span class="detail-value placeholder-value">待補充航班</span>
+              <span class="detail-value">CI 0164</span>
             </div>
             <div class="detail-item">
-              <span class="detail-label">登機時間 BOARDING</span>
-              <span class="detail-value placeholder-value">待補充時間</span>
+              <span class="detail-label">起飛時間 TIME</span>
+              <span class="detail-value">07:05 ～ 11:00</span>
+            </div>
+            <div class="detail-item" style="grid-column: span 2;">
+              <span class="detail-label">行李限制 BAGGAGE</span>
+              <span class="detail-value">手提 7kg / 託運 23kg</span>
             </div>
           </div>
         </div>
@@ -130,7 +134,7 @@
       <div class="boarding-pass">
         <div class="pass-header">
           <h3>回程航班 RETURN</h3>
-          <span class="status-badge">即將推出</span>
+          <span class="status-badge" style="background: var(--accent); color: white;">中華航空</span>
         </div>
         <div class="pass-body">
           <div class="pass-route">
@@ -143,8 +147,8 @@
               <div class="route-line"></div>
             </div>
             <div class="route-airport">
-              <div class="airport-code">TPE</div>
-              <div class="airport-name">台北桃園</div>
+              <div class="airport-code">KHH</div>
+              <div class="airport-name">高雄小港</div>
             </div>
           </div>
           <div class="pass-details">
@@ -158,11 +162,15 @@
             </div>
             <div class="detail-item">
               <span class="detail-label">航班編號 FLIGHT</span>
-              <span class="detail-value placeholder-value">待補充航班</span>
+              <span class="detail-value">CI 0165</span>
             </div>
             <div class="detail-item">
-              <span class="detail-label">登機時間 BOARDING</span>
-              <span class="detail-value placeholder-value">待補充時間</span>
+              <span class="detail-label">起飛時間 TIME</span>
+              <span class="detail-value">12:05 ～ 14:05</span>
+            </div>
+            <div class="detail-item" style="grid-column: span 2;">
+              <span class="detail-label">行李限制 BAGGAGE</span>
+              <span class="detail-value">手提 7kg / 託運 23kg</span>
             </div>
           </div>
         </div>
@@ -190,16 +198,17 @@
           <span class="day-desc">啟程！向著港都釜山奔馳</span>
         </div>
         
-        <!-- Day 1 Hotel Placeholder -->
         <div class="hotel-card">
           <div class="hotel-info-left">
             <div class="hotel-icon-box">🏠</div>
             <div class="hotel-details">
               <span class="hotel-label">今日溫馨住宿 HOTEL</span>
-              <span class="hotel-name placeholder-hotel">🏨 住宿飯店資料待補充，敬請期待！</span>
+              <span class="hotel-name">
+                <a href="https://maps.app.goo.gl/K58KRPZwjgqoQGEbA" target="_blank" rel="noopener noreferrer">🏨 海雲台中心酒店 (Haeundae Centum Hotel) ➔</a>
+              </span>
             </div>
           </div>
-          <span class="hotel-badge">⭐ 釜山海雲台附近</span>
+          <span class="hotel-badge">⭐ 釜山海雲台區</span>
         </div>
 
         <div class="attractions-list">
@@ -207,8 +216,8 @@
           <div class="attraction-card">
             <div class="attraction-info">
               <span class="attraction-tag">釜山初體驗</span>
-              <h3 class="attraction-name">首爾 KTX 移動到釜山</h3>
-              <p class="attraction-desc">帶著興奮無比的心情，全家人一起搭乘韓國的高鐵 KTX！看著窗外飛速掠過的風景，我們圍坐在一起聊天，分享著對這幾天行程的期待，一路歡聲笑語，向南奔向熱情的海濱城市釜山。釜山，我們來囉！</p>
+              <h3 class="attraction-name">首爾 KTX 移動到釜山 (含 AREX)</h3>
+              <p class="attraction-desc">抵達首爾仁川機場後，全家人一起搭乘舒適快捷的機場快線 AREX 直達首爾站，接著再轉乘韓國高鐵 KTX 奔向熱情的海濱城市釜山！看著窗外飛速掠過的風景，分享著對這幾天行程的期待，一路歡聲笑語。釜山，我們來囉！</p>
             </div>
             <div class="polaroid-media-container">
               <div class="tape"></div>
@@ -222,7 +231,7 @@
             <div class="attraction-info">
               <span class="attraction-tag">夜市探秘</span>
               <h3 class="attraction-name">海雲台傳統市場</h3>
-              <p class="attraction-desc">抵達釜山的第一個晚上，我們慢下腳步，悠閒漫步在熱鬧的海雲台傳統市場。這裡香氣四溢，到處都是道地的釜山在地小吃：誘人的辣炒年糕、暖呼呼的魚板湯、酥脆香甜的黑糖餅。看著大家滿足的吃貨笑容，疲憊全消，這就是最簡單的家庭幸福滋味。</p>
+              <p class="attraction-desc">抵達釜山的第一個晚上，我們慢下腳步，悠閒漫步在熱鬧的海雲台傳統市場。這裡香氣四溢，到處都是道地的釜山在地小吃：傳統市場熱鬧的街景、熱氣騰騰的辣炒年糕、令人垂涎的現烤海鮮。看著大家滿足的吃貨笑容，疲憊全消，這就是最簡單的家庭幸福滋味。</p>
             </div>
             <div class="polaroid-media-container">
               <div class="tape"></div>
@@ -241,6 +250,20 @@
               <div class="polaroid-caption">海雲台傳統市場的釜山美味</div>
             </div>
           </div>
+
+          <!-- Attraction 3 -->
+          <div class="attraction-card">
+            <div class="attraction-info">
+              <span class="attraction-tag">浪漫星空</span>
+              <h3 class="attraction-name">鑽石灣遊艇賞夜景</h3>
+              <p class="attraction-desc">晚餐後，全家人一同來到鑽石灣乘上豪華遊艇。隨著船隻緩緩航向大海，璀璨動人的釜山夜景在眼前如畫卷般展開——宏偉的廣安大橋閃爍著七彩霓虹，與繁華的都市樓宇交相輝映。迎著清涼的海風，我們聚在甲板上開心地合照、聊天，享受這份專屬於我們家的浪漫星空夜晚。</p>
+            </div>
+            <div class="polaroid-media-container">
+              <div class="tape"></div>
+              <img src="景點照片/鑽石灣遊艇夜景.png" alt="鑽石灣遊艇賞夜景">
+              <div class="polaroid-caption">鑽石灣遊艇賞百萬夜景</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -255,16 +278,18 @@
           <span class="day-desc">與海共舞，釜山的藍色極致</span>
         </div>
         
-        <!-- Day 2 Hotel Placeholder -->
+        <!-- Day 2 Hotel -->
         <div class="hotel-card">
           <div class="hotel-info-left">
             <div class="hotel-icon-box">🏠</div>
             <div class="hotel-details">
               <span class="hotel-label">今日溫馨住宿 HOTEL</span>
-              <span class="hotel-name placeholder-hotel">🏨 住宿飯店資料待補充，敬請期待！</span>
+              <span class="hotel-name">
+                <a href="https://maps.app.goo.gl/K58KRPZwjgqoQGEbA" target="_blank" rel="noopener noreferrer">🏨 海雲台中心酒店 (Haeundae Centum Hotel) ➔</a>
+              </span>
             </div>
           </div>
-          <span class="hotel-badge">⭐ 釜山海雲台附近</span>
+          <span class="hotel-badge">⭐ 釜山海雲台區</span>
         </div>
 
         <div class="attractions-list">
@@ -388,6 +413,24 @@
               <div class="polaroid-caption">漫步在釜山最高的天空之城</div>
             </div>
           </div>
+
+          <!-- Attraction 6 -->
+          <div class="attraction-card">
+            <div class="attraction-info">
+              <span class="attraction-tag">美味晚餐</span>
+              <h3 class="attraction-name">Ribs of Legend haeundae 韓式烤肉</h3>
+              <p class="attraction-desc">
+                晚餐時間，我們來到海雲台超人氣的烤肋排店 
+                <a href="https://maps.app.goo.gl/XVgW6TH91R1eM13T7" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 700; text-decoration: underline;">Ribs of Legend ➔</a>。
+                在燒燙的炭火上，滋滋作響的特製醃排骨散發出誘人的焦香，肉質鮮嫩多汁。全家人一邊生菜包肉一邊開心大嚼，分享著這兩天在釜山累積的滿滿歡笑，這頓烤肉大餐溫暖了每個人的心與胃！
+              </p>
+            </div>
+            <div class="polaroid-media-container">
+              <div class="tape"></div>
+              <img src="景點照片/烤肉晚餐.png" alt="Ribs of Legend haeundae 烤肉晚餐">
+              <div class="polaroid-caption">香氣四溢的炭火烤肋排</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -402,16 +445,18 @@
           <span class="day-desc">走入老釜山，品味純樸在地煙火氣</span>
         </div>
         
-        <!-- Day 3 Hotel Placeholder -->
+        <!-- Day 3 Hotel -->
         <div class="hotel-card">
           <div class="hotel-info-left">
             <div class="hotel-icon-box">🏠</div>
             <div class="hotel-details">
               <span class="hotel-label">今日溫馨住宿 HOTEL</span>
-              <span class="hotel-name placeholder-hotel">🏨 住宿飯店資料待補充，敬請期待！</span>
+              <span class="hotel-name">
+                <a href="https://maps.app.goo.gl/Mv8NXC7pKcqmosZc6" target="_blank" rel="noopener noreferrer">🏨 格樂麗雅海洋松島酒店 (Grab The Ocean Songdo) ➔</a>
+              </span>
             </div>
           </div>
-          <span class="hotel-badge">⭐ 釜山南浦洞附近</span>
+          <span class="hotel-badge">⭐ 釜山松島海景房</span>
         </div>
 
         <div class="attractions-list">
@@ -552,20 +597,36 @@
           <span class="day-desc">告別大海，重返繁華首爾</span>
         </div>
         
-        <!-- Day 4 Hotel Placeholder -->
+        <!-- Day 4 Hotel -->
         <div class="hotel-card">
           <div class="hotel-info-left">
             <div class="hotel-icon-box">🏠</div>
             <div class="hotel-details">
-              <span class="hotel-label">今日溫馨住宿 HOTEL</span>
-              <span class="hotel-name placeholder-hotel">🏨 住宿飯店資料待補充，敬請期待！</span>
+              <span class="hotel-label">今日溫馨住宿 LODGING</span>
+              <span class="hotel-name">🏡 弘大地鐵旁溫馨民宿</span>
             </div>
           </div>
-          <span class="hotel-badge">⭐ 首爾弘大附近</span>
+          <span class="hotel-badge">⭐ 首爾弘大商圈</span>
         </div>
 
         <div class="attractions-list">
           <!-- Attraction 1 -->
+          <div class="attraction-card">
+            <div class="attraction-info">
+              <span class="attraction-tag">極致享受</span>
+              <h3 class="attraction-name">享用飯店海景早餐</h3>
+              <p class="attraction-desc">
+                早晨在松島明亮的陽光中醒來，全家人一同前往飯店餐廳。坐在大片落地窗旁，一邊品嚐精緻豐盛的早餐、啜飲香醇的咖啡，一邊俯瞰波光粼粼的松島沙灘與在海面上緩緩滑行的纜車。這份無敵海景伴隨的愜意早餐，是今天最完美的起點。
+              </p>
+            </div>
+            <div class="polaroid-media-container">
+              <div class="tape"></div>
+              <img src="景點照片/松島海景早餐.png" alt="享用飯店海景早餐">
+              <div class="polaroid-caption">看著松島海景吃早餐</div>
+            </div>
+          </div>
+
+          <!-- Attraction 2 -->
           <div class="attraction-card">
             <div class="attraction-info">
               <span class="attraction-tag">海上漫步</span>
@@ -627,6 +688,34 @@
               <div class="polaroid-caption">充滿流行魅力的弘大街頭</div>
             </div>
           </div>
+
+          <!-- Attraction 4 -->
+          <div class="attraction-card">
+            <div class="attraction-info">
+              <span class="attraction-tag">溫馨落腳處</span>
+              <h3 class="attraction-name">弘大地鐵旁的民宿</h3>
+              <p class="attraction-desc">
+                今晚起，我們入住位於弘大地鐵站旁的溫馨民宿。民宿內部布置得十分溫馨精緻、採光良好，空間寬敞，非常適合全家人聚在一起聊天、吃炸雞。交通極為便利，下樓就能直奔熱鬧的商圈。這幾天這兒就是我們在首爾的溫馨小家！
+              </p>
+            </div>
+            <div class="polaroid-media-container">
+              <div class="tape"></div>
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Previous image">❮</button>
+                <button class="carousel-btn next" aria-label="Next image">❯</button>
+                <div class="carousel-viewport">
+                  <div class="carousel-track">
+                    <div class="carousel-slide"><img src="景點照片/弘大地鐵旁的民宿1.jpg" alt="民宿客廳與溫馨擺設"></div>
+                    <div class="carousel-slide"><img src="景點照片/弘大地鐵旁的民宿2.jpg" alt="乾淨舒適的睡臥空間"></div>
+                    <div class="carousel-slide"><img src="景點照片/弘大地鐵旁的民宿3.jpg" alt="陽光明亮的廚房一隅"></div>
+                    <div class="carousel-slide"><img src="景點照片/弘大地鐵旁的民宿4.jpg" alt="溫馨的小角落"></div>
+                  </div>
+                </div>
+                <div class="carousel-indicators"></div>
+              </div>
+              <div class="polaroid-caption">我們在首爾的溫馨小家</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -641,16 +730,16 @@
           <span class="day-desc">找回童心！愛寶樂園狂歡一整天</span>
         </div>
         
-        <!-- Day 5 Hotel Placeholder -->
+        <!-- Day 5 Hotel -->
         <div class="hotel-card">
           <div class="hotel-info-left">
             <div class="hotel-icon-box">🏠</div>
             <div class="hotel-details">
-              <span class="hotel-label">今日溫馨住宿 HOTEL</span>
-              <span class="hotel-name placeholder-hotel">🏨 住宿飯店資料待補充，敬請期待！</span>
+              <span class="hotel-label">今日溫馨住宿 LODGING</span>
+              <span class="hotel-name">🏡 弘大地鐵旁溫馨民宿</span>
             </div>
           </div>
-          <span class="hotel-badge">⭐ 首爾市區飯店</span>
+          <span class="hotel-badge">⭐ 首爾弘大商圈</span>
         </div>
 
         <div class="attractions-list">
@@ -692,16 +781,16 @@
           <span class="day-desc">穿越時空，優雅的韓風人文饗宴</span>
         </div>
         
-        <!-- Day 6 Hotel Placeholder -->
+        <!-- Day 6 Hotel -->
         <div class="hotel-card">
           <div class="hotel-info-left">
             <div class="hotel-icon-box">🏠</div>
             <div class="hotel-details">
-              <span class="hotel-label">今日溫馨住宿 HOTEL</span>
-              <span class="hotel-name placeholder-hotel">🏨 住宿飯店資料待補充，敬請期待！</span>
+              <span class="hotel-label">今日溫馨住宿 LODGING</span>
+              <span class="hotel-name">🏡 弘大地鐵旁溫馨民宿</span>
             </div>
           </div>
-          <span class="hotel-badge">⭐ 首爾明洞附近</span>
+          <span class="hotel-badge">⭐ 首爾弘大商圈</span>
         </div>
 
         <div class="attractions-list">
