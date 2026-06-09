@@ -748,6 +748,44 @@ p {
   background: transparent;
 }
 
+/* Weather Alert Banner Styles */
+.weather-alert-banner {
+  max-width: 1000px;
+  width: calc(100% - 4rem);
+  margin: 2rem auto 0 auto;
+  padding: 1.2rem 1.8rem;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.08);
+}
+
+.weather-alert-banner .alert-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.weather-alert-banner .alert-content {
+  flex: 1;
+}
+
+.weather-alert-banner .alert-title {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.25rem;
+  color: #92400e;
+  font-weight: 700;
+}
+
+.weather-alert-banner .alert-desc {
+  margin: 0;
+  font-size: 1rem;
+  color: #b45309;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .attraction-card {
     grid-template-columns: 1fr;
@@ -1348,6 +1386,21 @@ footer p {
   .hotel-badge {
     align-self: flex-start;
     margin-left: 55px;
+  }
+  
+  .weather-alert-banner {
+    margin: 1rem 1rem 0 1rem;
+    padding: 1rem 1.2rem;
+    gap: 0.8rem;
+  }
+  .weather-alert-banner .alert-icon {
+    font-size: 1.8rem;
+  }
+  .weather-alert-banner .alert-title {
+    font-size: 1.1rem;
+  }
+  .weather-alert-banner .alert-desc {
+    font-size: 0.95rem;
   }
 }
 
