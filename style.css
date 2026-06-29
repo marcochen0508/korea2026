@@ -1499,6 +1499,7 @@ footer p {
 .titan-exhibition-card {
   position: relative;
   overflow: visible !important;
+  z-index: 2;
 }
 
 /* Peeking Titan A from behind Polaroid */
