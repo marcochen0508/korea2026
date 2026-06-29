@@ -1502,6 +1502,13 @@ footer p {
   z-index: 2;
 }
 
+/* Force polaroid and info text to stack above the peeking titan */
+.titan-exhibition-card .attraction-info,
+.titan-exhibition-card .polaroid-media-container {
+  position: relative;
+  z-index: 3;
+}
+
 /* Peeking Titan A from behind Polaroid */
 .peeking-titan-container {
   position: absolute;
@@ -1509,7 +1516,7 @@ footer p {
   right: -20px;
   width: 150px;
   height: auto;
-  z-index: -1; /* Behind the polaroid but in front of background */
+  z-index: 1; /* Above card background, but below polaroid-media-container (z-index: 3) */
   pointer-events: none;
   transform: translateY(180px) scale(0.7);
   opacity: 0;
