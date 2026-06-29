@@ -1494,6 +1494,64 @@ footer p {
     /* Faster speed for smaller screens so it doesn't drag too slowly */
     transition: transform 4.0s cubic-bezier(0.1, 0.85, 0.25, 1), opacity 0.5s ease-in;
   }
+
+/* --- Attack on Titan Exhibition Easter Eggs (Option 1 & 2) --- */
+.titan-exhibition-card {
+  position: relative;
+  overflow: visible !important;
+}
+
+/* Peeking Titan A from behind Polaroid */
+.peeking-titan-container {
+  position: absolute;
+  top: -130px; /* Adjust to peek out from behind the polaroid */
+  right: -20px;
+  width: 150px;
+  height: auto;
+  z-index: -1; /* Behind the polaroid but in front of background */
+  pointer-events: none;
+  transform: translateY(180px) scale(0.7);
+  opacity: 0;
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease;
+}
+
+.peeking-titan-container img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+}
+
+/* When scrolled into view, reveal Titan A */
+.titan-exhibition-card.reveal-titan .peeking-titan-container {
+  transform: translateY(0) scale(1.05) rotate(5deg);
+  opacity: 1;
+}
+
+/* Polaroid card shaking (Earthquake) & Red steam glow */
+.titan-exhibition-card.reveal-titan .polaroid-media-container {
+  animation: polaroid-earthquake 0.9s cubic-bezier(.36,.07,.19,.97) 0.4s both;
+  box-shadow: 0 0 35px rgba(255, 75, 75, 0.65), var(--polaroid-shadow);
+  border: 1.5px solid rgba(255, 75, 75, 0.45);
+  transition: box-shadow 0.5s ease, border 0.5s ease;
+}
+
+@keyframes polaroid-earthquake {
+  0%, 100% { transform: scale(1.05) rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: scale(1.05) translate(-4px, -2px) rotate(-1deg); }
+  20%, 40%, 60%, 80% { transform: scale(1.05) translate(4px, 2px) rotate(1deg); }
+}
+
+/* Responsive adjustments for peeking titan */
+@media (max-width: 768px) {
+  .peeking-titan-container {
+    width: 100px;
+    top: -90px;
+    right: -10px;
+    transform: translateY(130px) scale(0.7);
+  }
+  .titan-exhibition-card.reveal-titan .peeking-titan-container {
+    transform: translateY(0) scale(1.03) rotate(5deg);
+  }
 }
 
 

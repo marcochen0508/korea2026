@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   let titanSwept = false;
   const titanSweepContainer = document.querySelector('.titan-sweep-container');
+  let exhibitionTriggered = false;
+  const exhibitionCard = document.querySelector('.titan-exhibition-card');
 
   window.addEventListener('scroll', () => {
     // Sticky nav shadow
@@ -71,6 +73,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset when scrolled away
         titanSweepContainer.classList.remove('sweep');
         titanSwept = false;
+      }
+    }
+
+    // Trigger Titan Exhibition Easter Eggs (Option 1, 2, 3)
+    if (exhibitionCard) {
+      const rect = exhibitionCard.getBoundingClientRect();
+      // Trigger when the exhibition card is 65% visible in the viewport
+      if (rect.top < window.innerHeight * 0.65 && rect.bottom > 100) {
+        if (!exhibitionTriggered) {
+          exhibitionCard.classList.add('reveal-titan');
+          
+          // Option 3: Trigger the sweep B animation again
+          if (titanSweepContainer) {
+            titanSweepContainer.classList.remove('sweep');
+            void titanSweepContainer.offsetWidth; // Force reflow
+            titanSweepContainer.classList.add('sweep');
+          }
+          
+          exhibitionTriggered = true;
+        }
+      } else if (rect.top > window.innerHeight || rect.bottom < 0) {
+        // Reset when scrolled away so it can be re-triggered
+        exhibitionCard.classList.remove('reveal-titan');
+        exhibitionTriggered = false;
       }
     }
   });
