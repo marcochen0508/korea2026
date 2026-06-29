@@ -1512,13 +1512,13 @@ footer p {
 /* Peeking Titan A from behind Polaroid - nested inside polaroid-media-container */
 .peeking-titan-container {
   position: absolute;
-  top: -110px; /* Peek out of the top of the polaroid */
+  top: -75px; /* Lowered from -110px to prevent overlapping text */
   right: 15px;
   width: 130px;
   height: auto;
   z-index: -1; /* Behind the polaroid white card content and images */
   pointer-events: none;
-  transform: translateY(160px) scale(0.7);
+  transform: translateY(120px) scale(0.7);
   opacity: 0;
   transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease;
 }
@@ -1553,9 +1553,9 @@ footer p {
 @media (max-width: 768px) {
   .peeking-titan-container {
     width: 100px;
-    top: -90px;
+    top: -55px; /* Lowered from -90px on mobile to avoid blocking text */
     right: -10px;
-    transform: translateY(130px) scale(0.7);
+    transform: translateY(90px) scale(0.7);
   }
   .titan-exhibition-card.reveal-titan .peeking-titan-container {
     transform: translateY(0) scale(1.03) rotate(5deg);
