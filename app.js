@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBar = document.querySelector('.nav-bar');
   const sections = document.querySelectorAll('section[id], div[id].day-block');
   const navItems = document.querySelectorAll('.nav-item');
+  
+  let titanSwept = false;
+  const titanSweepContainer = document.querySelector('.titan-sweep-container');
 
   window.addEventListener('scroll', () => {
     // Sticky nav shadow
@@ -52,6 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
           item.classList.add('active');
         }
       });
+    }
+
+    // Trigger Titan Sweep animation when Day 5 enters viewport
+    const day5Section = document.getElementById('day5');
+    if (day5Section && titanSweepContainer) {
+      const rect = day5Section.getBoundingClientRect();
+      // Trigger when the top of Day 5 section enters 60% of viewport height
+      if (rect.top < window.innerHeight * 0.6 && rect.bottom > 100) {
+        if (!titanSwept) {
+          titanSweepContainer.classList.add('sweep');
+          titanSwept = true;
+        }
+      } else if (rect.top > window.innerHeight || rect.bottom < 0) {
+        // Reset when scrolled away
+        titanSweepContainer.classList.remove('sweep');
+        titanSwept = false;
+      }
     }
   });
 
