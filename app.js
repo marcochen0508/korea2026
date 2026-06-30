@@ -185,7 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Find all images within polaroid containers and set up click events
   const polaroids = document.querySelectorAll('.polaroid-media-container');
   polaroids.forEach(polaroid => {
-    const images = Array.from(polaroid.querySelectorAll('img'));
+    // Filter out the peeking Titan image from the lightbox gallery
+    const images = Array.from(polaroid.querySelectorAll('img')).filter(img => !img.closest('.peeking-titan-container'));
     const captionText = polaroid.querySelector('.polaroid-caption') ? polaroid.querySelector('.polaroid-caption').textContent : '';
 
     images.forEach((img, index) => {
