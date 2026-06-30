@@ -1494,6 +1494,7 @@ footer p {
     /* Faster speed for smaller screens so it doesn't drag too slowly */
     transition: transform 4.0s cubic-bezier(0.1, 0.85, 0.25, 1), opacity 0.5s ease-in;
   }
+}
 
 /* --- Attack on Titan Exhibition Easter Eggs (Option 1 & 2) --- */
 .titan-exhibition-card {
